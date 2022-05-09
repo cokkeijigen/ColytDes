@@ -1,0 +1,58 @@
+<div id="MainBox">
+    <!-- ----------------------------------------------------------------------- -->
+    <div id="user_view">
+        <div class="user_view_1">
+            <div class="defset">
+                <img id="user_icon">
+                <h3 id="user_neme"></h3>
+            </div>
+            <div class="defset">
+                <p id="sign_text">
+                    <a class="sign_text"></a>
+                </p>
+            </div>
+            <div id="left_con">
+                <p class="word_t">文章:</p>
+                <p id="word_num"></p>
+            </div>
+            <div id="bottom_con" class="defset">
+                <p class="bottom_con_p1">相册：<a class="bottom_num">%d</a></p>
+                <p class="bottom_con_p2">标签：<a class="bottom_num">%d</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------- -->
+    <div id="tools">
+        <div class="push">
+            <img src="./res/user/push.svg" alt="">
+            <p>发布</p>
+        </div>
+        <div class="manage">
+            <img src="./res/user/manage.svg" alt="">
+            <p>管理</p>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------- -->
+    <div id="hot_label_list"></div>
+    <!-- ----------------------------------------------------------------------- -->
+    <div id="hot_subject_list"></div>
+
+</div>
+
+<style>
+    #MainBox {
+        border: none;
+        height: 100vh;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        padding: 10%;
+        margin: 0;
+        left: 50%;
+        top: 50%;
+    }
+</style>
+
+<script src="/static/main_script/content.js"></script>
+<script src="./js/content.js"></script>
+<script src="./js/init.js"></script>
+<script src="/static/init-runner.js"></script>

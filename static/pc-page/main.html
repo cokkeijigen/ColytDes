@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+    <title>PC-PAGE</title>
+    <script src="/static/main_script/content.js"></script>
+    <script src="./script/pc-page.js"></script>
+</head>
+
+<body>
+    <div id="TopBox">
+        <div id="top_nav">
+            <p>ColytDes</p>
+        </div>
+        <iframe src="" frameborder="0" scrolling="no" id="banner_iframe" class=".iframe_default"></iframe>
+    </div>
+    <div id="CenterBox">
+        <iframe src="" frameborder="0" scrolling="no" id="left_iframe" class=".iframe_default"></iframe>
+        <iframe src="" frameborder="0" id="center_iframe" class=".iframe_default"></iframe>
+        <iframe src="" frameborder="0" scrolling="no" id="right_iframe" class=".iframe_default"></iframe>
+    </div>
+    <div id="Footer">
+        <iframe src="" frameborder="0" scrolling="no" id="footer_iframe" class=".iframe_default"></iframe>
+    </div>
+</body>
+
+<script>
+    loadStyleFile("./style/pc-page.css");
+    loadStyleFile("./style/main.css");
+    setBodyBackground("./res/top_view.png");
+    setMainBackground("./res/68467122_p0.png");
+    get("banner_iframe.id").src = "./module/top/";
+    get("left_iframe.id").src = "./module/left/";
+    get("center_iframe.id").src = "./module/center/";
+    get("right_iframe.id").src = "./module/right/";
+    get("footer_iframe.id").src = "./module/bottom/";
+</script>
+<script src="/static/init-runner.js"></script>
+
+</html>
