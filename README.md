@@ -122,7 +122,7 @@ atImgebox(url) // 在右边添加贴图
 9.setHotLabelLists(data) // 设置热门标签列表，参数：[{"title":"text","url":"http://"}]
 ```
 setHotLabelLists([
-      { "title": "Github", "url": "https://github.com/cokkeijigen/ColytDes" },
+        { "title": "Github", "url": "https://github.com/cokkeijigen/ColytDes" },
         { "title": "猫猫居然可以这么可爱！", "url": "" },
         { "title": "总之打点字上去", "url": "" },
         { "title": "你很勇哦", "url": "" },
