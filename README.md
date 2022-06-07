@@ -72,7 +72,6 @@ setOnClick(get("test.id"),function(){
 ### 9.reload() // 重新加载页面
 ***
 ### ./pc-page
-***
 #### ----------------------------Main----------------------------
 ```
 1. setpcpageBackground(url) // 设置pc页面的背景图片
