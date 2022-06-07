@@ -174,7 +174,7 @@ createItem({
 ***
 ## thisContent字段 || pcpageContent对象
 ```
- thisConten
+ thisContent
 ```
 ```
 pcpageContent.getBannerContent()
