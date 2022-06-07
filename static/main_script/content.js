@@ -89,10 +89,14 @@ function setOnClick(element, fun) {
 }
 
 function setTargetPage(element, url) {
-    if (url == "") return;
     element.addEventListener("click", function() {
-        window.open(url, "_blank");
+        gotoNewPage(url)
     });
+}
+
+function gotoNewPage(url) {
+    if (url == "") return;
+    window.open(url, "_blank");
 }
 
 (function() {
