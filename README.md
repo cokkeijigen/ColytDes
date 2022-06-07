@@ -52,8 +52,18 @@ setStyle(get('test.id'), {
 ```
 ### ./pc-page
 ***
-`1. setMainBackground()`
-`2. setBodyBackground()`
-`3. setMainBodyStyle()`
-`4. getMainBody()`
-`5. getMainElement()`
+```
+1. setMainBackground() // 设置pc页面的背景图片
+```
+```
+2. setBodyBackground() // 设置pc页面的body背景图片
+```
+```
+3. setMainBodyStyle() // 设置pc页面的body样式
+```
+```
+4. getMainBody() // 获取pc页面的body
+```
+```
+5. getMainElement() // 获取pc页面的html
+```
