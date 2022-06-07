@@ -6,24 +6,19 @@
 
 const thisContent = get("main_ifram_content.id").contentWindow;
 const pcpageContent = new function() {
-    const BannerContent = thisContent.get("banner_iframe.id").contentWindow;
-    const LeftContent = thisContent.get("left_iframe.id").contentWindow;
-    const CenterContent = thisContent.get("center_iframe.id").contentWindow;
-    const RightContent = thisContent.get("right_iframe.id").contentWindow;
-    const FooterContent = thisContent.get("footer_iframe.id").contentWindow;
     this.getBannerContent = function() {
-        return BannerContent;
+        return thisContent.get("banner_iframe.id").contentWindow;
     }
     this.getLeftContent = function() {
-        return LeftContent;
+        return thisContent.get("left_iframe.id").contentWindow;
     }
     this.getCenterContent = function() {
-        return CenterContent;
+        return thisContent.get("center_iframe.id").contentWindow;
     }
     this.getRightContent = function() {
-        return RightContent; 
+        return thisContent.get("right_iframe.id").contentWindow;
     }
     this.getFooterContent = function() {
-        return FooterContent;
+        return thisContent.get("footer_iframe.id").contentWindow;
     }
 }
