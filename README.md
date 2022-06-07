@@ -1,7 +1,7 @@
 # ColytDes
 总之打点字上去<br>
-### 提供的函数接口
-01. logd() // 打印日志
+## 提供的函数接口
+01. logd() /* 参数为string */
 ```
 logd("hello world!"); // 控制台打印hello wrold，即console.log()
 ```
@@ -21,4 +21,15 @@ let elemet = test.to(); // 返回list中的第一个元素对象内容，该方�
 let test = get("test.tag"); // 返回一个对象，包含all()和to(v = 0)两个方法
 let elelist = test.all(); // 和.class一致
 let elemet = test.to(); // 和.class一致
+```
+3. loadStyleFile() /* 参数为css文件路径或者url */
+```
+loadStyleFile("./test.css"); // 在当前html引入.css文件
+```
+4. setStyle() /* 参数为获取对象表达式和css内容*/
+```
+setStyle("get('test.id')", {
+  "background-image": "url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)",
+  "background-size": "80%"
+});
 ```
