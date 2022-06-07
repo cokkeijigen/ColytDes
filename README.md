@@ -6,11 +6,11 @@ loadMethods()的使用请看下面
 # 提供的可用于初始化前端页面内容展示函数接口
 
 ***
-### 01. logd() /* 参数为string */
+### 1. logd() /* 参数为string */
 ```
 logd("hello world!"); // 控制台打印hello wrold，即console.log()
 ```
-2. get()  /* 参数为： "id名.id" 、"类名.class"、 "标签名.tag" */
+### 2. get()  /* 参数为： "id名.id" 、"类名.class"、 "标签名.tag" */
 ```
 // 参数一 .id
 let test = get("test.id"); // 返回一个document.getElementById()对象
@@ -27,18 +27,18 @@ let test = get("test.tag"); // 返回一个对象，包含all()和to(v = 0)两�
 let elelist = test.all(); // 和.class一致
 let elemet = test.to(); // 和.class一致
 ```
-3. loadStyleFile() /* 参数为css文件路径或者url */
+### 3. loadStyleFile() /* 参数为css文件路径或者url */
 ```
 loadStyleFile("./test.css"); // 在当前html引入.css文件
 ```
-4. setStyle() /* 参数为：元素对象、css样式、class名称（可选）*/
+### 4. setStyle() /* 参数为：元素对象、css样式、class名称（可选）*/
 ```
 setStyle(get('test.id'), {
   "background-image": "url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)",
   "background-size": "80%"
 });
 ```
-5. loadMethods()  /* 参数为单个或者多个function或者map */
+### 5. loadMethods()  /* 参数为单个或者多个function或者map */
 ```
 // 该函数用于在init-runner.js中调用其他函数
  let methods_1 = loadMethods(function(){
@@ -53,23 +53,23 @@ setStyle(get('test.id'), {
         {\'background-image\':\'url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)\',\'background-size\':\'80%\'}"
     })
 ```
-6. setOnClick() /* 参数：元素对象、回调 */
+### 6. setOnClick() /* 参数：元素对象、回调 */
 ```
 // 给id为test的元素对象设置点击事件
 setOnClick(get("test.id"),function(){
   logd("点击了test");
 });
 ```
-7. setTargetPage() /* 参数：element、url */
+### 7. setTargetPage() /* 参数：element、url */
 ```
  // 给id为test的元素对象设置点击新建标签打开https://www.google.com
   setTargetPage(get("test.id"), "https://www.google.com");
 ```
-8. gotoNewPage() /* 参数为url */
+### 8. gotoNewPage() /* 参数为url */
 ```
  gotoNewPage("https://www.google.com") // 新建标签打开https://www.google.com
 ```
-9.reload() // 重新加载页面
+### 9.reload() // 重新加载页面
 ### ./pc-page
 ***
 #### ----------------------------Main----------------------------
