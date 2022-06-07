@@ -90,3 +90,6 @@ setOnClick(get("test.id"),function(){
 atImgebox(url) // 在右边添加贴图 
 ```
 #### left
+```
+1.gotoNewPage(url) // 新建标签打开url
+```
