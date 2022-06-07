@@ -1,5 +1,5 @@
 # ColytDes
-总之打点字上去<br>
+总之打点字上去...<br>
 页面初始化的代码请在 `./static/init-runner.js`<br>
 配合`loadMethods()`使用或者`try-catch`语句书写<br>
 loadMethods()的使用请看下面
