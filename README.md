@@ -68,7 +68,7 @@ setOnClick(get("test.id"),function(){
 ```
 ### ./pc-page
 ***
-#### Main
+#### ----------------------------Main----------------------------
 ```
 1. setpcpageBackground(url) // 设置pc页面的背景图片
 ```
@@ -84,16 +84,16 @@ setOnClick(get("test.id"),function(){
 ```
 5. getpcpageMainElement() // 获取pc页面的html
 ```
-#### top
+#### ----------------------------top----------------------------
 ```
 1.setNoticeTitle(str) // 设置公告
 2.setNoticeUrl(url) //设置公告链接
 ```
-#### right
+#### ----------------------------right----------------------------
 ```
 atImgebox(url) // 在右边添加贴图 
 ```
-#### left
+#### ----------------------------left----------------------------
 ```
 1.setUserViewVisibility(val) // 设置用户view的显示或者隐藏，参数：true、false
 ```
@@ -144,7 +144,7 @@ setHotSubjectList([
         { "title": "これっですっ！", "url": "" }
     ]);
 ```
-#### center
+#### ----------------------------center----------------------------
 1. createItem(data, token) // 创建显示动态项目
 ```
 /*参数：
