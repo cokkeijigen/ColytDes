@@ -50,16 +50,29 @@ setStyle(get('test.id'), {
         {\'background-image\':\'url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)\',\'background-size\':\'80%\'}"
     })
 ```
+6. setOnClick() /* 参数：元素对象、回调 */
+```
+// 给id为test的元素对象设置点击事件
+setOnClick(get("test.id"),function(){
+  logd("点击了test");
+});
+```
+7. setTargetPage() /* 参数：element、url */
+```
+ // 给id为test的元素对象设置点击新建标签打开https://www.google.com
+  setTargetPage(get("test.id"), "https://www.google.com");
+```
 ### ./pc-page
 ***
+#### Main
 ```
-1. setpcpageBackground() // 设置pc页面的背景图片
-```
-```
-2. setpcpageBodyBackground() // 设置pc页面的body背景图片
+1. setpcpageBackground(url) // 设置pc页面的背景图片
 ```
 ```
-3. setpcpageBodyStyle() // 设置pc页面的body样式
+2. setpcpageBodyBackground(url) // 设置pc页面的body背景图片
+```
+```
+3. setpcpageBodyStyle(style) // 设置pc页面的body样式
 ```
 ```
 4. getpcpageMainBody() // 获取pc页面的body
@@ -67,3 +80,13 @@ setStyle(get('test.id'), {
 ```
 5. getpcpageMainElement() // 获取pc页面的html
 ```
+#### top
+```
+1.setNoticeTitle(str) // 设置公告
+2.setNoticeUrl(url) //设置公告链接
+```
+#### right
+```
+atImgebox(url) // 在右边添加贴图 
+```
+#### left
