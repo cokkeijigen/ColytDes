@@ -15,7 +15,7 @@
     setAlbums(100);
     setLabels(100);
     setHotLabelLists([
-        { "title": "Github", "url": "https://github.com/cokkeijigen" },
+        { "title": "Github", "url": "https://github.com/cokkeijigen/ColytDes" },
         { "title": "猫猫居然可以这么可爱！", "url": "" },
         { "title": "总之打点字上去", "url": "" },
         { "title": "你很勇哦", "url": "" },

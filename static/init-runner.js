@@ -21,9 +21,9 @@
     // };
     // new loadMethods(UserSignFormatText, setMainBodyStyle).setLog(logd()).invoke();
 
-    // new loadMethods(function() {
-    //     setUserSignText("总之打点字上去");
-    // }).invoke();
+    loadMethods(function() {
+        // setUserSignText("总之打点字上去");
+    }).invoke();
 
 
     // new loadMethods().invokes({
@@ -31,7 +31,7 @@
     //     "setStyle": "\"getMainBody()\",{\'background-image\':\'url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)\',\'background-size\':\'80%\'}"
     // });
 
-    new loadMethods(function() {
-        setNoticeTitle("PCR国服公会招人，公会名：姫玩姬神社！")
-    }).invoke();
+
+
+
 })();

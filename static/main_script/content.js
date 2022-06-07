@@ -55,20 +55,22 @@ function setStyle(e, css) {
 }
 
 function loadMethods(...funs) {
-    this.invoke = function() {
-        for (var i in funs) {
-            try {
-                funs[i]();
-            } catch (err) {}
+    return new function(funs) {
+        this.invoke = function() {
+            for (var i in funs) {
+                try {
+                    funs[i]();
+                } catch (err) {}
+            }
         }
-    }
-    this.invokes = function(expression) {
-        for (var v in expression) {
-            try {
-                eval(v + "(%s)".replace("%s", expression[v]));
-            } catch (err) {}
+        this.invokes = function(expression) {
+            for (var v in expression) {
+                try {
+                    eval(v + "(%s)".replace("%s", expression[v]));
+                } catch (err) {}
+            }
         }
-    }
+    }(funs);
 }
 
 
@@ -106,4 +108,4 @@ function loadMethods(...funs) {
             }
         }
     }, { passive: false });
-});
+})();

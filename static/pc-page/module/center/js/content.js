@@ -1,4 +1,7 @@
-function createItem(data, split, token = null) {
+let SplitLinePosition = 0;
+let itemsCount = 0;
+
+function createItem(data, token = null) {
 
     const ItemsBox = get("ItemsBox.id");
     const item = document.createElement("div");
@@ -13,9 +16,20 @@ function createItem(data, split, token = null) {
         .replace("%message", "" + data["message"])
         .replace("%folder", "" + data["folder"]);
     ItemsBox.appendChild(item);
-    if (split == 0) ItemsBox.appendChild(getItemSplitLine("right"));
-    if (split == 1) ItemsBox.appendChild(getItemSplitLine("left"));
+    itemsCount++;
+    if (SplitLinePosition == 0) {
+        ItemsBox.appendChild(getItemSplitLine("right"));
+        SplitLinePosition = 1;
+        return;
+    }
+    if (SplitLinePosition == 1) {
+        ItemsBox.appendChild(getItemSplitLine("left"));
+        SplitLinePosition = 0;
+    }
+}
 
+function getItemsCount() {
+    return itemsCount;
 }
 
 // 分割线
