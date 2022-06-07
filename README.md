@@ -62,6 +62,10 @@ setOnClick(get("test.id"),function(){
  // 给id为test的元素对象设置点击新建标签打开https://www.google.com
   setTargetPage(get("test.id"), "https://www.google.com");
 ```
+8. gotoNewPage() /* 参数为url */
+```
+ gotoNewPage("https://www.google.com") // 新建标签打开https://www.google.com
+```
 ### ./pc-page
 ***
 #### Main
@@ -91,5 +95,74 @@ atImgebox(url) // 在右边添加贴图
 ```
 #### left
 ```
-1.gotoNewPage(url) // 新建标签打开url
+1.setUserViewVisibility(val) // 设置用户view的显示或者隐藏，参数：true、false
+```
+```
+2.setUserIcon(url) // 设置用户头像图片
+```
+```
+3.setUserName(str) // 设置用户名称
+```
+```
+4.setUserSignText(str) // 设置用户签名，纯文本
+```
+```
+5.setUserSignFormatText(str, fun) // 设置用户签名，支持使用标签的文本，回调（可选）
+```
+```
+6.setWordNum(val) // 设置用户文章数量
+```
+```
+7.setAlbums(val) // 设置相册数量
+```
+```
+8.setLabels(val) // 设置标签数量
+```
+9.setHotLabelLists(data) // 设置热门标签列表，参数：[{"title":"text","url":"http://"}]
+```
+setHotLabelLists([
+      { "title": "Github", "url": "https://github.com/cokkeijigen/ColytDes" },
+        { "title": "猫猫居然可以这么可爱！", "url": "" },
+        { "title": "总之打点字上去", "url": "" },
+        { "title": "你很勇哦", "url": "" },
+        { "title": "雪ちゃん可愛い", "url": "" },
+        { "title": "キャルちゃん", "url": "" },
+        { "title": "ColytDes", "url": "" },
+        { "title": "なな", "url": "" },
+        { "title": "チェシャ猫", "url": "" },
+        { "title": "猫好き", "url": "" }
+    ]);
+```
+10.setHotSubjectList(data) // 设置热门主题列表，参数：[{"title":"text","url":"http://"}]
+```
+setHotSubjectList([
+        { "title": "吾が妻 雪風...", "url": "" },
+        { "title": "男が変態なんて何か悪い？", "url": "" },
+        { "title": "迷えば、敗れる", "url": "" },
+        { "title": "参れ！隻狼！", "url": "" },
+        { "title": "うまぴょい伝説", "url": "" },
+        { "title": "これっですっ！", "url": "" }
+    ]);
+```
+#### center
+1. createItem(data, token) // 创建显示动态项目
+```
+/*参数：
+  data : {imgurl,title,content,browse,message,folder}
+  token : 可选，该参数将会设置item的id为 "item_token_" + "设置的token参数"
+*/
+createItem({
+            "imgurl": "/static/pc-page/module/center/res/kyaru01.jpg",
+            "title": "震惊！猫猫居然做出了... ",
+            "content": "让我们来和小编看看这究竟是发生了什么事..."
+            "browse": 44,
+            "message": 234,
+            "folder": "114514"
+        }, "test"); // 此处item的id为item_token_test
+```
+```
+2.getItemsCount() // 获取已创建的项目数量
+```
+```
+3.clearItems() // 清除全部已创建的项目
 ```
