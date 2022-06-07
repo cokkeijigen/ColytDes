@@ -5,10 +5,10 @@ function get(val) {
         return new function() {
             let Elements = document.getElementsByClassName(val.substring(0, val.length - 6));
             this.to = function(v = 0) {
-                if (v >= this.Elements) return null;
+                if (v >= Elements) return null;
                 return Elements[v];
             }
-            this.all = function() { return this.Elements };
+            this.all = function() { return Elements };
         }
     if (val.substring(val.length - 4) == ".tag")
         return new function() {
@@ -39,20 +39,31 @@ function reload() {
     window.location.reload();
 }
 
-function setStyle(e, css) {
-    for (var v in css) {
-        var set = function(str) {
-            var l = str.split('-');
-            if (l.length != 2) return str;
-            return (l[0] + l[1].substring(0, 1).toUpperCase() + l[1].substring(1))
-                .replace(/^\s*|\s*$/g, "");
-        }(v);
-        var val = css[v];
-        try {
-            eval(e + ".style.%s=\"%v\"".replace("%s", set).replace("%v", val));
-        } catch (err) {}
+function setStyle(e, css, name = null) {
+    function createClassName() {
+        const array = "abcdefghijklmnopqrstuvwxyz".split("");
+        var result = "";
+        for (var i = 0; i < 8; i++)
+            result += array[Math.round(Math.random() * (array.length - 1))];
+        return result;
     }
+    const className = name != null ? name : createClassName();
+    const cssText = typeof(css) == "string" ? css : ".%name{%conetnt}"
+        .replace("%name", className)
+        .replace("%conetnt", (function() {
+            var text = "";
+            for (var s in css)
+                text += s + ":" + css[s];
+            return text;
+        }()));
+    const style = document.createElement("style");
+    style.type = "text/css";
+    style.innerText = cssText;
+    document.getElementsByTagName("html").item(0).appendChild(style);
+    e.className = e.className + " " + className;
+
 }
+
 
 function loadMethods(...funs) {
     return new function(funs) {
