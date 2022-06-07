@@ -5,7 +5,7 @@
 ```
 logd("hello world!"); // 控制台打印hello wrold，即console.log()
 ```
-2. get()  /* 参数为 "id名.id" 、"类名.class"、 "标签名.tag" */
+2. get()  /* 参数为： "id名.id" 、"类名.class"、 "标签名.tag" */
 ```
 // 参数一 .id
 let test = get("test.id"); // 返回一个document.getElementById()对象
@@ -26,7 +26,7 @@ let elemet = test.to(); // 和.class一致
 ```
 loadStyleFile("./test.css"); // 在当前html引入.css文件
 ```
-4. setStyle() /* 参数为 元素对象、css样式、class名称（可选）*/
+4. setStyle() /* 参数为：元素对象、css样式、class名称（可选）*/
 ```
 setStyle(get('test.id'), {
   "background-image": "url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)",
