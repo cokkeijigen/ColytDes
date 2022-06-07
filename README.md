@@ -33,3 +33,17 @@ setStyle(get('test.id'), {
   "background-size": "80%"
 });
 ```
+5. loadMethods() /* 参数为单个或者多个function或者map */
+```
+// 该函数用于在init-runner.js中调用其他函数
+ let methods_1 = loadMethods(function(){
+    setUserSignText("总之打点字上去");
+ });
+ methods_1.invoke();
+
+ let method_2 = loadMethods();
+ method_2.invokes({
+        "setUserSignText": "\"总之打点字上去\"",
+        "setStyle": "get('test.id')",{\'background-image\':\'url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)\',\'background-size\':\'80%\'}"
+    })
+```
