@@ -1,6 +1,8 @@
 # ColytDes
 总之打点字上去<br>
-## 提供的函数接口
+# 提供的函数接口
+
+***
 01. logd() /* 参数为string */
 ```
 logd("hello world!"); // 控制台打印hello wrold，即console.log()
@@ -48,3 +50,10 @@ setStyle(get('test.id'), {
         {\'background-image\':\'url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)\',\'background-size\':\'80%\'}"
     })
 ```
+### ./pc-page
+***
+`1. setMainBackground()`
+`2. setBodyBackground()`
+`3. setMainBodyStyle()`
+`4. getMainBody()`
+`5. getMainElement()`
