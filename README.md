@@ -1,5 +1,10 @@
 # ColytDes
 总之打点字上去<br>
+```
+页面初始化的代码请写在 ./static/init-runner.js
+配合loadMethods()使用
+```
+
 # 提供的可用于初始化前端页面内容展示函数接口
 
 ***
