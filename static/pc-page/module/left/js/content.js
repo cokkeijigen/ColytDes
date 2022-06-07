@@ -1,8 +1,3 @@
-function gotoNewPage(url) {
-    if (url == "") return;
-    window.open(url, "_blank");
-}
-
 function setUserViewVisibility(val) {
     const user_view = get("user_view.id");
     if (val) user_view.style.visibility = "visible";
