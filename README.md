@@ -1,4 +1,5 @@
-# ColytDes
+# ColytDes 
+[查看demo](http://colytitse.cokkeijigen.top/)
 总之打点字上去...<br>
 页面初始化的代码请写在 `./static/init-runner.js`<br>
 配合`loadMethods()`使用或者`try-catch`语句书写<br>
