@@ -9,7 +9,7 @@ function setBodyBackground(url) {
 }
 
 function setMainBodyStyle(style) {
-    setStyle("document.body", style);
+    setStyle(document.body, style);
 }
 
 function getMainBody() {
