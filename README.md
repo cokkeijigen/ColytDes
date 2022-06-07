@@ -172,7 +172,10 @@ createItem({
 3.clearItems() // 清除全部已创建的项目
 ```
 ***
-## pcpageContent对象
+## thisContent字段 || pcpageContent对象
+```
+ thisConten
+```
 ```
 pcpageContent.getBannerContent()
 ```
