@@ -72,7 +72,7 @@ setOnClick(get("test.id"),function(){
 ```
 ### 9.reload() // 重新加载页面
 ***
-### ./pc-page
+## ./pc-page
 #### ----------------------------Main----------------------------
 ```
 1. setpcpageBackground(url) // 设置pc页面的背景图片
@@ -170,4 +170,21 @@ createItem({
 ```
 ```
 3.clearItems() // 清除全部已创建的项目
+```
+***
+## pcpageContent对象
+```
+pcpageContent.getBannerContent()
+```
+```
+pcpageContent.getLeftContent()
+```
+```
+pcpageContent.getCenterContent()
+```
+```
+pcpageContent.getRightContent()
+```
+```
+pcpageContent.getFooterContent()
 ```
