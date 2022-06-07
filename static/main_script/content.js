@@ -84,7 +84,16 @@ function loadMethods(...funs) {
     }(funs);
 }
 
+function setOnClick(element, fun) {
+    element.addEventListener("click", fun);
+}
 
+function setTargetPage(element, url) {
+    if (url == "") return;
+    element.addEventListener("click", function() {
+        window.open(url, "_blank");
+    });
+}
 
 (function() {
     const keyCodeMap = {
