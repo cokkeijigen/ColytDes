@@ -66,6 +66,9 @@ setOnClick(get("test.id"),function(){
 ```
  gotoNewPage("https://www.google.com") // 新建标签打开https://www.google.com
 ```
+```
+9.reload() // 重新加载页面
+```
 ### ./pc-page
 ***
 #### ----------------------------Main----------------------------
