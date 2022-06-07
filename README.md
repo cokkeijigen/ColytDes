@@ -1,7 +1,11 @@
 # ColytDes
 总之打点字上去<br>
 ### 提供的函数接口
-01. get()  /* 参数为 "id名.id" 、"类名.class"、 "标签名.tag" */
+01. logd() // 打印日志
+```
+logd("hello world!"); // 控制台打印hello wrold，即console.log()
+```
+2. get()  /* 参数为 "id名.id" 、"类名.class"、 "标签名.tag" */
 ```
 // 参数一 .id
 let test = get("test.id"); // 返回一个document.getElementById()对象
