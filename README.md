@@ -8,7 +8,7 @@
 # 提供的可用于初始化前端页面内容展示函数接口
 
 ***
-01. logd() /* 参数为string */
+### 01. logd() /* 参数为string */
 ```
 logd("hello world!"); // 控制台打印hello wrold，即console.log()
 ```
