@@ -16,6 +16,9 @@ const pcpageContent = new function() {
         return thisContent.get("center_iframe.id").contentWindow;
     }
     this.getRightContent = function() {
+        return thisContent.get("right_iframe.id").contentWindow;
+    }
+    this.getFooterContent = function() {
         return thisContent.get("footer_iframe.id").contentWindow;
     }
 }
