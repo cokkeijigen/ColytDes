@@ -33,6 +33,7 @@ function get(val) {
     };
 }
 
+
 function logd(str) {
     return console.log(str);
 }
