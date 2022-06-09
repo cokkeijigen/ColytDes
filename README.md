@@ -11,20 +11,26 @@ loadMethods()的使用请看下面
 ```
 logd("hello world!"); // 控制台打印hello wrold，即console.log()
 ```
-### 2. get()  /* 参数为： "id名.id" 、"类名.class"、 "标签名.tag" */
+### 2. get()  /* 参数为： "id名.id" 、"类名.class"、 "标签名.tag"、"名字.name" */
 ```
 // 参数一 .id
-let test = get("test.id"); // 返回一个document.getElementById()对象
+let test = get("test.id"); // 或者 get("test").id 返回一个document.getElementById()对象
 ```
 ```
 // 参数二 .class
-let test = get("test.class"); // 返回一个对象，包含all()和to(v = 0)两个方法
+let test = get("test.class"); // 或者get("test").class 返回一个对象，包含all()和to(v = 0)两个方法
 let elelist = test.all(); // 返回一个在test对象中通过类名获取到的元素list，即document.getElementsByClassName()
 let elemet = test.to(); // 返回list中的第一个元素对象内容，该方法也可以通过传入数字引索到list中的第几个元素
 ```
 ```
-// 参数二 .tag
-let test = get("test.tag"); // 返回一个对象，包含all()和to(v = 0)两个方法
+// 参数三 .tag
+let test = get("div.tag"); // 或者get("div").tag 返回一个对象，包含all()和to(v = 0)两个方法
+let elelist = test.all(); // 和.class一致
+let elemet = test.to(); // 和.class一致
+```
+```
+// 参数四 .name
+let test = get("test.name"); // 或者get("div").name 返回一个对象，包含all()和to(v = 0)两个方法
 let elelist = test.all(); // 和.class一致
 let elemet = test.to(); // 和.class一致
 ```
