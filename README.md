@@ -45,7 +45,7 @@ setStyle(get('test.id'), {
   "background-size": "80%"
 });
 ```
-### 5. loadMethods() /* 参数为单个或者多个function或者map */
+### 5. loadMethods() /* 参数为单个或者多个回调或者map */
 ```
 // 该函数用于在init-runner.js中调用其他函数
  let methods_1 = loadMethods(function(){
