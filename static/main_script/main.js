@@ -10,7 +10,6 @@ function setMainIframContent(url) {
             main_iframe.style.display = "initial";
         };
     }
-
 }
 
 function setMainIframSize(

@@ -1,19 +1,3 @@
-function setOnClick(element, fun) {
-    element.addEventListener("click", fun);
-}
-
-function setTargetPage(element, url) {
-    if (url == "") return;
-    element.addEventListener("click", function() {
-        window.open(url, "_blank");
-    });
-}
-
-function gotoNewPage(url) {
-    if (url == "") return;
-    window.open(url, "_blank");
-}
-
 function setUserViewVisibility(val) {
     const user_view = get("user_view.id");
     if (val) user_view.style.visibility = "visible";
@@ -99,4 +83,14 @@ function setHotSubjectList(data) {
             .replace("%css", "background-color:" + color[val]);
     }
     hot_subject_list.innerHTML = result;
+}
+
+let isCanPushAction = false;
+
+function setCanPushAction(e) {
+    isCanPushAction = e;
+}
+
+function getCanPushAction() {
+    return isCanPushAction;
 }

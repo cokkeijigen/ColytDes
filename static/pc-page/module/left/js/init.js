@@ -1,3 +1,5 @@
+const thisIdName = "pc-page-left";
+
 (function() { // 添加样式文件
     loadStyleFile("/static/pc-page/style/main.css");
     loadStyleFile("./css/user_view_content.css");
@@ -7,39 +9,7 @@
     loadStyleFile("/static/pc-page/module/public/init.css");
 })();
 
-(function() { // 初始化页面内容
-    setUserIcon("./res/user/icon.png");
-    setUserName("Hello World!");
-    setUserSignText("ザ・ワールド！世界は俺が変わってみせる！ああああああああああああああああっなんてね(>ω･* )ﾉ");
-    setWordNum(23333);
-    setAlbums(100);
-    setLabels(100);
-    setHotLabelLists([
-        { "title": "Github", "url": "https://github.com/cokkeijigen/ColytDes" },
-        { "title": "猫猫居然可以这么可爱！", "url": "" },
-        { "title": "总之打点字上去", "url": "" },
-        { "title": "你很勇哦", "url": "" },
-        { "title": "雪ちゃん可愛い", "url": "" },
-        { "title": "キャルちゃん", "url": "" },
-        { "title": "ColytDes", "url": "" },
-        { "title": "なな", "url": "" },
-        { "title": "チェシャ猫", "url": "" },
-        { "title": "猫好き", "url": "" }
-    ]);
-    setHotSubjectList([
-        { "title": "吾が妻 雪風...", "url": "" },
-        { "title": "男が変態なんて何か悪い？", "url": "" },
-        { "title": "迷えば、敗れる", "url": "" },
-        { "title": "参れ！隻狼！", "url": "" },
-        { "title": "うまぴょい伝説", "url": "" },
-        { "title": "これっですっ！", "url": "" }
-    ]);
-
-
-})();
-
 (function() {
-
     let sign_text = get("sign_text.class").to();
     if (sign_text.innerText.length < 1) sign_text = get("sign_text.id");
     const bottom_con = get("bottom_con.id");
@@ -66,4 +36,10 @@
         bottom_num.to(0).style.color = "";
         bottom_num.to(1).style.color = "";
     }
+})();
+
+(function() {
+    setOnClick(get("push.class").to(), function() {
+        setCanPushAction(true);
+    });
 })();

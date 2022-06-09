@@ -1,3 +1,5 @@
+const thisIdName = "pc-page-center";
+
 (function() {
     loadStyleFile("/static/pc-page/style/main.css");
     loadStyleFile("./css/content.css");

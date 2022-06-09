@@ -1,3 +1,5 @@
+const thisIdName = "pc-page-top";
+
 function setNoticeTitle(str) {
     get("notice_title.id").innerText = "公告：" +
         (str.length > 25 ? str.substring(0, 25) + "..." : str);

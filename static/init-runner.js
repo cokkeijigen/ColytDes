@@ -1,37 +1,61 @@
+(function() { // 初始化left页面内容
+    loadMethod("pc-page-left", function() {
+        setUserIcon("./res/user/icon.png");
+        setUserName("Hello World!");
+        setUserSignText("ザ・ワールド！世界は俺が変わってみせる！ああああああああああああああああっなんてね(>ω･* )ﾉ");
+        setWordNum(23333);
+        setAlbums(100);
+        setLabels(100);
+        setHotLabelLists([
+            { "title": "Github", "url": "https://github.com/cokkeijigen/ColytDes" },
+            { "title": "猫猫居然可以这么可爱！", "url": "" },
+            { "title": "总之打点字上去", "url": "" },
+            { "title": "你很勇哦", "url": "" },
+            { "title": "雪ちゃん可愛い", "url": "" },
+            { "title": "キャルちゃん", "url": "" },
+            { "title": "ColytDes", "url": "" },
+            { "title": "なな", "url": "" },
+            { "title": "チェシャ猫", "url": "" },
+            { "title": "猫好き", "url": "" }
+        ]);
+        setHotSubjectList([
+            { "title": "吾が妻 雪風...", "url": "" },
+            { "title": "男が変態なんて何か悪い？", "url": "" },
+            { "title": "迷えば、敗れる", "url": "" },
+            { "title": "参れ！隻狼！", "url": "" },
+            { "title": "うまぴょい伝説", "url": "" },
+            { "title": "これっですっ！", "url": "" }
+        ]);
+    });
+})();
+
+(function() { // 初始化center页面内容
+    loadMethod("pc-page-center", function() {
+        for (var i = 0; i < 5; i++)
+            createItem({
+                "imgurl": "/static/pc-page/module/center/res/kyaru01.jpg",
+                "title": "震惊！猫猫居然做出了... ",
+                "content": "让我们来和小编看看这究竟是发生了什么事，大家都知道猫猫非常可爱，但这背后的原因究竟是为什么，让我们来和小编看看这究竟是发生了什么事，大家都知道猫猫非常可爱，但这背后的原因究竟是为什么让我们来和小编看看这究竟是发生了什么事，大家都知道猫猫非常可爱，但这背后的原因究竟是为什么让我们来和小编看看这究竟是发生了什么事，大家都知道猫猫非常可爱，但这背后的原因究竟是为什么让我们来和小编看看这究竟是发生了什么事，大家都知道猫猫非常可爱，但这背后的原因究竟是为什么",
+                "date": "2022-11-24",
+                "browse": 44,
+                "message": 234,
+                "folder": "114514"
+            }, i);
+    });
+})();
+
+(function() { // 初始化right页面内容
+    loadMethod("pc-page-right", function() {
+        atImgebox("/static/pc-page/res/kyaru.png");
+        atImgebox("/static/pc-page/res/kyaru1.jpg");
+        atImgebox("/static/pc-page/res/murasame.png");
+        atImgebox("/static/pc-page/res/kyaru2.png");
+    });
+})();
+
 (function() {
-
-    // let setMainBodyStyle = function() {
-    //     setStyle("getMainBody()", {
-    //         "background-image": "url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)",
-    //         "background-size": "80%",
-    //     })
-    // };
-    // let UserSignFormatText = function() {
-    //     setUserSignFormatText(
-    //         "<p style='color:#ff0000;font-size:20px'>啊啊啊啊<p>",
-    //         function(view) {
-    //             view.onmouseover = function() {
-    //                 logd("触碰到了签名");
-    //             }
-    //             view.onmouseout = function() {
-    //                 logd("离开了");
-    //             }
-    //         }
-    //     );
-    // };
-    // new loadMethods(UserSignFormatText, setMainBodyStyle).setLog(logd()).invoke();
-
-    loadMethods(function() {
-        // setUserSignText("总之打点字上去");
-    }).invoke();
-
-
-    // new loadMethods().invokes({
-    //     "setUserSignText": "\"总之打点字上去\"",
-    //     "setStyle": "\"getMainBody()\",{\'background-image\':\'url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)\',\'background-size\':\'80%\'}"
-    // });
-
-
-
-
+    loadMethod("pc-page-top", function() {
+        setNoticeTitle("何も持って生まれぬ故に、何者にもなれる！");
+        setNoticeUrl("./test.html");
+    });
 })();

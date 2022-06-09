@@ -1,22 +1,22 @@
-function setMainBackground(url) {
+function setpcpageBackground(url) {
     get("html.tag").to().style.backgroundImage = "url(" + url + ")";
 
 }
 
-function setBodyBackground(url) {
+function setpcpageBodyBackground(url) {
     const body = document.body;
     body.style.backgroundImage = "url(" + url + ")";
 }
 
-function setMainBodyStyle(style) {
-    setStyle("document.body", style);
+function setpcpageMainBodyStyle(style) {
+    setStyle(document.body, style);
 }
 
-function getMainBody() {
+function getpcpageMainBody() {
     return document.body;
 }
 
 
-function getMainElement() {
+function getpcpageMainElement() {
     return get("html.tag").to();
 }

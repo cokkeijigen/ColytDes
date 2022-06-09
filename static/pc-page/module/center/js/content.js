@@ -1,12 +1,11 @@
+const ItemsBox = get("ItemsBox.id");
 let SplitLinePosition = 0;
 let itemsCount = 0;
 
 function createItem(data, token = null) {
-
-    const ItemsBox = get("ItemsBox.id");
     const item = document.createElement("div");
     item.className = "items";
-    if (token != null) item.id = "iems_token_" + token;
+    if (token != null) item.id = "item_token_" + token;
     item.innerHTML = getItemDocument()
         .replace("%imgurl", "" + data["imgurl"])
         .replace("%title", "" + data["title"])
@@ -30,6 +29,10 @@ function createItem(data, token = null) {
 
 function getItemsCount() {
     return itemsCount;
+}
+
+function clearItems() {
+    ItemsBox.innerHTML = ""
 }
 
 // 分割线
