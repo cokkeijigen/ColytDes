@@ -1,26 +1,37 @@
 function get(val) {
+    let Elements = null;
+    let to = function(v = 0) {
+        if (v >= Elements) return null;
+        return Elements[v];
+    }
+    let all = function() { return Elements };
     if (val.substring(val.length - 3) == ".id")
         return document.getElementById(val.substring(0, val.length - 3));
     if (val.substring(val.length - 6) == ".class")
         return new function() {
-            let Elements = document.getElementsByClassName(val.substring(0, val.length - 6));
-            this.to = function(v = 0) {
-                if (v >= Elements) return null;
-                return Elements[v];
-            }
-            this.all = function() { return Elements };
+            Elements = document.getElementsByClassName(val.substring(0, val.length - 6));
+            this.to = to;
+            this.all = all;
         }
     if (val.substring(val.length - 4) == ".tag")
         return new function() {
-            let Elements = document.getElementsByTagName(val.substring(0, val.length - 4));
-            this.to = function(v = 0) {
-                if (v >= Elements) return null;
-                return Elements[v];
-            }
-            this.all = function() { return Elements };
+            Elements = document.getElementsByTagName(val.substring(0, val.length - 4));
+            this.to = to;
+            this.all = all;
         }
-    return null;
+    if (val.substring(val.length - 5) == ".name")
+        return new function() {
+            Elements = document.getElementsByName(val.substring(0, val.length - 5));
+            this.to = to;
+            this.all = all;
+        }
+    return new function() {
+        this.tags = get(val + ".tag")
+        this.clazz = get(val + ".class")
+        this.id = get(val + ".id")
+    };
 }
+
 
 function logd(str) {
     return console.log(str);
