@@ -45,7 +45,7 @@ setStyle(get('test.id'), {
   "background-size": "80%"
 });
 ```
-### 5. loadMethods()  /* 参数为单个或者多个function或者map */
+### 5. loadMethods() /* 参数为单个或者多个function或者map */
 ```
 // 该函数用于在init-runner.js中调用其他函数
  let methods_1 = loadMethods(function(){
@@ -60,23 +60,29 @@ setStyle(get('test.id'), {
         {\'background-image\':\'url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)\',\'background-size\':\'80%\'}"
     })
 ```
-### 6. setOnClick() /* 参数：元素对象、回调 */
+### 6. loadMethod() /* 参数：idName、回调 */
+```
+loadMethod("pc-page-left", function(){
+  setUserSignText("总之打点字上去");
+});
+```
+### 7. setOnClick() /* 参数：元素对象、回调 */
 ```
 // 给id为test的元素对象设置点击事件
 setOnClick(get("test.id"),function(){
   logd("点击了test");
 });
 ```
-### 7. setTargetPage() /* 参数：element、url */
+### 8. setTargetPage() /* 参数：element、url */
 ```
  // 给id为test的元素对象设置点击新建标签打开https://www.google.com
   setTargetPage(get("test.id"), "https://www.google.com");
 ```
-### 8. gotoNewPage() /* 参数为url */
+### 9. gotoNewPage() /* 参数为url */
 ```
  gotoNewPage("https://www.google.com") // 新建标签打开https://www.google.com
 ```
-### 9.reload() // 重新加载页面
+### 10.reload() // 重新加载页面
 ***
 ## ./pc-page
 #### ----------------------------Main----------------------------
