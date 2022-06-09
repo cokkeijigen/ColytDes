@@ -26,9 +26,10 @@ function get(val) {
             this.all = all;
         }
     return new function() {
-        this.tags = get(val + ".tag")
-        this.clazz = get(val + ".class")
-        this.id = get(val + ".id")
+        this.tag = get(val + ".tag");
+        this.class = get(val + ".class");
+        this.id = get(val + ".id");
+        this.name = get(val + ".name");
     };
 }
 
