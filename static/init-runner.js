@@ -1,11 +1,5 @@
 (function() { // 初始化left页面内容
     loadMethod("pc-page-left", function() {
-        setUserIcon("./res/user/icon.png");
-        setUserName("Hello World!");
-        setUserSignText("ザ・ワールド！世界は俺が変わってみせる！ああああああああああああああああっなんてね(>ω･* )ﾉ");
-        setWordNum(23333);
-        setAlbums(100);
-        setLabels(100);
         setHotLabelLists([
             { "title": "Github", "url": "https://github.com/cokkeijigen/ColytDes" },
             { "title": "猫猫居然可以这么可爱！", "url": "" },
@@ -26,6 +20,19 @@
             { "title": "うまぴょい伝説", "url": "" },
             { "title": "これっですっ！", "url": "" }
         ]);
+    });
+
+    loadMethod("pc-page-left", function() {
+        const userInfo = getUerInfo();
+        if (userInfo != null) {
+            setUserIcon(userInfo["icon"]);
+            setUserName(userInfo["name"]);
+            setUserSignText(userInfo["sign"]);
+            setWordNum(userInfo["words"]);
+            setAlbums(userInfo["albums"]);
+            setLabels(userInfo["labels"]);
+            setUserViewVisibility(true);
+        }
     });
 })();
 
@@ -53,7 +60,7 @@
     });
 })();
 
-(function() {
+(function() { // 初始化top页面内容
     loadMethod("pc-page-top", function() {
         setNoticeTitle("何も持って生まれぬ故に、何者にもなれる！");
         setNoticeUrl("./test.html");

@@ -42,4 +42,5 @@ const thisIdName = "pc-page-left";
     setOnClick(get("push.class").to(), function() {
         setCanPushAction(true);
     });
+    setUserViewVisibility(false);
 })();

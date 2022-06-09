@@ -1,7 +1,13 @@
 function setUserViewVisibility(val) {
     const user_view = get("user_view.id");
-    if (val) user_view.style.visibility = "visible";
-    else user_view.style.visibility = "hidden";
+    const tools = get("tools.id");
+    if (val) {
+        user_view.style.display = "";
+        tools.style.display = "";
+    } else {
+        user_view.style.display = "none";
+        tools.style.display = "none";
+    }
 }
 
 function setUserIcon(url) {
