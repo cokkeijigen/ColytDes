@@ -23,6 +23,9 @@
     });
 
     loadMethod("pc-page-left", function() {
+        function getUerInfo() {
+            return null;
+        }
         const userInfo = getUerInfo();
         if (userInfo != null) {
             setUserIcon(userInfo["icon"]);
