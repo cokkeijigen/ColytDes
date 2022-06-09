@@ -65,7 +65,7 @@ function setStyle(e, css, name = null) {
         .replace("%conetnt", (function() {
             var text = "";
             for (var s in css) {
-                text += s + ":" + css[s];
+                text += s + ":" + css[s] + ";";
             }
             return text;
         }()));
