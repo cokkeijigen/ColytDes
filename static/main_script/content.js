@@ -65,6 +65,7 @@ function setStyle(e, css, name = null) {
 
 }
 
+
 function loadMethods(...funs) {
     return new function(funs) {
         this.invoke = function() {
