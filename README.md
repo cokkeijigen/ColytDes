@@ -25,14 +25,14 @@ let elemet = test.to(); // 返回list中的第一个元素对象内容，该方�
 ```
 // 参数三 .tag
 let test = get("div.tag"); // 或者get("div").tag 返回一个对象，包含all()和to(v = 0)两个方法
-let elelist = test.all(); // 和.class一致
-let elemet = test.to(); // 和.class一致
+let elelist = test.all(); // 返回一个在test对象中通过标签名获取到的元素list，即document.getElementsByTagName()
+let elemet = test.to(); // 返回list中的第一个元素对象内容，该方法也可以通过传入数字引索到list中的第几个元素
 ```
 ```
 // 参数四 .name
 let test = get("test.name"); // 或者get("div").name 返回一个对象，包含all()和to(v = 0)两个方法
-let elelist = test.all(); // 和.class一致
-let elemet = test.to(); // 和.class一致
+let elelist = test.all(); // 返回一个在test对象中通过名称获取到的元素list，即document.getElementsByName()
+let elemet = test.to(); // 返回list中的第一个元素对象内容，该方法也可以通过传入数字引索到list中的第几个元素
 ```
 ### 3. loadStyleFile() /* 参数为css文件路径或者url */
 ```
