@@ -87,9 +87,7 @@ function loadMethods(...funs) {
         }
         this.invokes = function(expression) {
             for (var v in expression) {
-                try {
-                    eval(v + "(%s)".replace("%s", expression[v]));
-                } catch (err) {}
+                eval(v + "try {(%s)} catch (err) {}".replace("%s", expression[v]));
             }
         }
     }(funs);
