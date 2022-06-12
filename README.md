@@ -175,7 +175,7 @@ createItem({
             "browse": 44,
             "message": 234,
             "folder": "114514"
-        }, "test"); // 此处item的id为item_token_test
+        }, "item_token_test"); // 此处item的id为item_token_test
 ```
 ```
 2.getItemsCount() // 获取已创建的项目数量
