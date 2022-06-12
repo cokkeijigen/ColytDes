@@ -95,9 +95,9 @@ function loadMethods(...funs) {
     }(funs);
 }
 
-function loadMethod(idName, fun) {
+function loadMethod(idName, Callback) {
     if (getIdName() != idName) return;
-    fun();
+    Callback();
 }
 
 function setOnClick(element, fun) {
