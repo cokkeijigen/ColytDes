@@ -166,7 +166,7 @@ setHotSubjectList([
 ```
 /*参数：
   data : {imgurl,title,content,browse,message,folder}
-  token : 可选，该参数将会设置item的id为 "item_token_" + "设置的token参数"
+  token : 可选，该参数将会设置item的id名称
 */
 createItem({
             "imgurl": "/static/pc-page/module/center/res/kyaru01.jpg",
