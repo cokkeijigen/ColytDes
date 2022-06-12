@@ -1,8 +1,8 @@
 function get(val) {
     let Elements = null;
     let to = function(v = 0) {
-        if (v >= Elements) return null;
-        return Elements[v];
+        if ((v < 0 && 0 > Elements.length - v) || v >= Elements.length) return null;
+        return Elements[v >= 0 ? v : Elements.length - v];
     }
     let all = function() { return Elements };
     if (val.substring(val.length - 3) == ".id")
