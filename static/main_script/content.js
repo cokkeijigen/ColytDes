@@ -71,7 +71,7 @@ function setStyle(e, css, name = null) {
     const style = document.createElement("style");
     style.type = "text/css";
     style.innerText = cssText;
-    document.getElementsByTagName("html").item(0).appendChild(style);
+    get("html").tag.to().appendChild(style);
     e.className = e.className + " " + className;
 
 }
