@@ -5,7 +5,7 @@ let itemsCount = 0;
 function createItem(data, token = null) {
     const item = document.createElement("div");
     item.className = "items";
-    if (token != null) item.id = "item_token_" + token;
+    if (token != null) item.id = token;
     item.innerHTML = getItemDocument()
         .replace("%imgurl", "" + data["imgurl"])
         .replace("%title", "" + data["title"])
