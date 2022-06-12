@@ -33,8 +33,8 @@ function get(val) {
     };
 }
 
-function logd(str) {
-    return console.log(str);
+function logd(...str) {
+    eval("console.log('" + str.toString().replace(",", " ") + "')");
 }
 
 function loadStyleFile(url) {
