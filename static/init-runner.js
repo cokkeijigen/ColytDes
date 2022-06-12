@@ -20,20 +20,31 @@
             { "title": "うまぴょい伝説", "url": "" },
             { "title": "これっですっ！", "url": "" }
         ]);
+
+        setUserIcon("./res/user/icon.png");
+        setUserName("Hello World!");
+        setUserSignText("ザ・ワールド！世界は俺が変わってみせる！ああああああああああああああああっなんてね(>ω･* )ﾉ");
+        setWordNum(23333);
+        setAlbums(100);
+        setLabels(100);
+        setUserViewVisibility(true);
     });
 
-    loadMethod("pc-page-left", function() {
-        const userInfo = getUerInfo();
-        if (userInfo != null) {
-            setUserIcon(userInfo["icon"]);
-            setUserName(userInfo["name"]);
-            setUserSignText(userInfo["sign"]);
-            setWordNum(userInfo["words"]);
-            setAlbums(userInfo["albums"]);
-            setLabels(userInfo["labels"]);
-            setUserViewVisibility(true);
-        }
-    });
+    // loadMethod("pc-page-left", function() {
+    //     function getUerInfo() {
+    //         return null;
+    //     }
+    //     const userInfo = getUerInfo();
+    //     if (userInfo != null) {
+    //         setUserIcon(userInfo["icon"]);
+    //         setUserName(userInfo["name"]);
+    //         setUserSignText(userInfo["sign"]);
+    //         setWordNum(userInfo["words"]);
+    //         setAlbums(userInfo["albums"]);
+    //         setLabels(userInfo["labels"]);
+    //         setUserViewVisibility(true);
+    //     }
+    // });
 })();
 
 (function() { // 初始化center页面内容

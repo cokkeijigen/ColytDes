@@ -11,3 +11,15 @@ const thisIdName = "pc-page";
     get("right_iframe.id").src = "./module/right/";
     get("footer_iframe.id").src = "./module/bottom/";
 })();
+
+(function() {
+    const left_iframe = get("left_iframe").id.contentWindow;
+    setInterval(function() {
+        try {
+            if (left_iframe.getCanPushAction()) {
+                logd("点击了？？？")
+                left_iframe.setCanPushAction(false);
+            }
+        } catch (e) {}
+    }, 300);
+})();

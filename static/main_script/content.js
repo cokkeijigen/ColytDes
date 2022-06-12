@@ -33,7 +33,6 @@ function get(val) {
     };
 }
 
-
 function logd(str) {
     return console.log(str);
 }
@@ -65,7 +64,7 @@ function setStyle(e, css, name = null) {
         .replace("%conetnt", (function() {
             var text = "";
             for (var s in css) {
-                text += s + ":" + css[s];
+                text += s + ":" + css[s] + ";";
             }
             return text;
         }()));
@@ -119,6 +118,12 @@ function gotoNewPage(url) {
 function getIdName() {
     return thisIdName;
 }
+
+(function() {
+    const script = document.createElement("script");
+    script.src = "/static/init-runner.js";
+    get("html").tag.to().appendChild(script);
+})();
 
 (function() {
     const keyCodeMap = {

@@ -2,7 +2,7 @@
 [查看demo](http://colytitse.cokkeijigen.top/)
 总之打点字上去...<br>
 页面初始化的代码请写在 `./static/init-runner.js`<br>
-配合`loadMethods()`使用或者`try-catch`语句书写<br>
+配合`loadMethods() or loadMethod()`使用或者`try-catch`语句书写<br>
 loadMethods()的使用请看下面
 # 提供的可用于初始化前端页面内容展示函数接口
 
@@ -11,22 +11,28 @@ loadMethods()的使用请看下面
 ```
 logd("hello world!"); // 控制台打印hello wrold，即console.log()
 ```
-### 2. get()  /* 参数为： "id名.id" 、"类名.class"、 "标签名.tag" */
+### 2. get()  /* 参数为： "id名.id" 、"类名.class"、 "标签名.tag"、"名字.name" */
 ```
 // 参数一 .id
-let test = get("test.id"); // 返回一个document.getElementById()对象
+let test = get("test.id"); // 或者 get("test").id 返回一个document.getElementById()对象
 ```
 ```
 // 参数二 .class
-let test = get("test.class"); // 返回一个对象，包含all()和to(v = 0)两个方法
+let test = get("test.class"); // 或者get("test").class 返回一个对象，包含all()和to(v = 0)两个方法
 let elelist = test.all(); // 返回一个在test对象中通过类名获取到的元素list，即document.getElementsByClassName()
 let elemet = test.to(); // 返回list中的第一个元素对象内容，该方法也可以通过传入数字引索到list中的第几个元素
 ```
 ```
-// 参数二 .tag
-let test = get("test.tag"); // 返回一个对象，包含all()和to(v = 0)两个方法
-let elelist = test.all(); // 和.class一致
-let elemet = test.to(); // 和.class一致
+// 参数三 .tag
+let test = get("div.tag"); // 或者get("div").tag 返回一个对象，包含all()和to(v = 0)两个方法
+let elelist = test.all(); // 返回一个在test对象中通过标签名获取到的元素list，即document.getElementsByTagName()
+let elemet = test.to(); // 返回list中的第一个元素对象内容，该方法也可以通过传入数字引索到list中的第几个元素
+```
+```
+// 参数四 .name
+let test = get("test.name"); // 或者get("div").name 返回一个对象，包含all()和to(v = 0)两个方法
+let elelist = test.all(); // 返回一个在test对象中通过名称获取到的元素list，即document.getElementsByName()
+let elemet = test.to(); // 返回list中的第一个元素对象内容，该方法也可以通过传入数字引索到list中的第几个元素
 ```
 ### 3. loadStyleFile() /* 参数为css文件路径或者url */
 ```
@@ -39,7 +45,7 @@ setStyle(get('test.id'), {
   "background-size": "80%"
 });
 ```
-### 5. loadMethods()  /* 参数为单个或者多个function或者map */
+### 5. loadMethods() /* 参数为单个或者多个回调或者map */
 ```
 // 该函数用于在init-runner.js中调用其他函数
  let methods_1 = loadMethods(function(){
@@ -54,23 +60,29 @@ setStyle(get('test.id'), {
         {\'background-image\':\'url(https://s1.ax1x.com/2022/05/05/OmUmnK.jpg)\',\'background-size\':\'80%\'}"
     })
 ```
-### 6. setOnClick() /* 参数：元素对象、回调 */
+### 6. loadMethod() /* 参数：idName、回调 */
+```
+loadMethod("pc-page-left", function(){
+  setUserSignText("总之打点字上去");
+});
+```
+### 7. setOnClick() /* 参数：元素对象、回调 */
 ```
 // 给id为test的元素对象设置点击事件
 setOnClick(get("test.id"),function(){
   logd("点击了test");
 });
 ```
-### 7. setTargetPage() /* 参数：element、url */
+### 8. setTargetPage() /* 参数：element、url */
 ```
  // 给id为test的元素对象设置点击新建标签打开https://www.google.com
   setTargetPage(get("test.id"), "https://www.google.com");
 ```
-### 8. gotoNewPage() /* 参数为url */
+### 9. gotoNewPage() /* 参数为url */
 ```
  gotoNewPage("https://www.google.com") // 新建标签打开https://www.google.com
 ```
-### 9.reload() // 重新加载页面
+### 10.reload() // 重新加载页面
 ***
 ## ./pc-page
 #### ----------------------------Main----------------------------
